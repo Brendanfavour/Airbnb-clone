@@ -1,0 +1,22 @@
+/* Center the search bar on mobile screens */
+@media screen and (max-width: 768px) {
+    .search-bar {
+      display: flex;
+      flex-direction: column; /* Stack the elements (input and button) */
+      align-items: center;    /* Horizontally center the content */
+      justify-content: center; /* Vertically center the content */
+      width: 100%;            /* Full width on mobile */
+      padding: 10px 0;        /* Add some vertical padding */
+    }
+  
+    .search-bar input {
+      width: 90%;             /* Input spans 90% of the width */
+      max-width: 400px;       /* Limit the maximum width */
+      margin-bottom: 10px;    /* Space between input and button */
+    }
+  
+    .search-bar button {
+      display: block;         /* Ensure the button is visible */
+    }
+  }
+  

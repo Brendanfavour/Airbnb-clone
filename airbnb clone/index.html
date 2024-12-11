@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airbnb Clone</title>
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header container">
+    <img src="assets/Airbnb-Logo.wine.png" alt="Airbnb Logo" class="logo">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search destinations">
+      <div class="search-suggestions" id="search-suggestions"></div>
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="menu">
+      <i class="fas fa-globe"></i>
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Not sure where to go? Perfect.</h1>
+      <button id="flexible-btn" class="explore-btn"><i class="fas fa-compass"></i> I'm flexible</button>
+    </div>
+  </section>
+
+ <!-- Modal for Flexible Travel Ideas -->
+ <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <h2>Flexible Travel Ideas</h2>
+    <ul id="travel-ideas"></ul>
+  </div>
+</div>
+
+  <!-- Inspiration Section -->
+  <section class="inspiration container">
+    <h2>Inspiration for your next trip</h2>
+    <div class="grid" id="inspiration-grid">
+      <div class="card">
+        <img src="assets/beach.jpg" alt="Beach">
+        <p><i class="fas fa-umbrella-beach"></i> Beaches</p>
+      </div>
+      <div class="card">
+        <img src="assets/mountain.jpg" alt="Mountain">
+        <p><i class="fas fa-mountain"></i> Mountains</p>
+      </div>
+      <div class="card">
+        <img src="assets/City.jpg" alt="City">
+        <p><i class="fas fa-city"></i> City Escapes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="filters container">
+    <select id="price-filter">
+      <option value="all">Price Range</option>
+      <option value="low">Below $100</option>
+      <option value="medium">$100 - $300</option>
+      <option value="high">Above $300</option>
+    </select>
+    <select id="property-type-filter">
+      <option value="all">Property Type</option>
+      <option value="house">House</option>
+      <option value="apartment">Apartment</option>
+      <option value="villa">Villa</option>
+    </select>
+  </section>
+
+  <!-- Location Cards -->
+  <section class="location-cards container" id="location-cards"></section>
+
+  <!-- Image Carousel -->
+  <section class="carousel container">
+    <div class="carousel-container">
+      <button id="prev" class="carousel-btn">Prev</button>
+      <img id="carousel-image" src="assets/p9.jpg" alt="Hero Image" class="carousel-image">
+      <button id="next" class="carousel-btn">Next</button>
+    </div>
+  </section>
+
+  <!-- Cost Calculator -->
+  <section class="calculator container">
+    <label for="nights">Number of Nights:</label>
+    <input type="number" id="nights" value="1" min="1">
+    <label for="people">Number of People:</label>
+    <input type="number" id="people" value="1" min="1">
+    <p>Total Cost: <span id="total-cost">$0</span></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Airbnb Clone. Built for Educational Purposes.</p>
+  </footer>
+
+  <script src="script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
+
